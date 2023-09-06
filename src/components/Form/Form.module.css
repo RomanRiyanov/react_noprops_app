@@ -1,0 +1,62 @@
+.form {
+    width: 30%;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    outline: 1px solid grey;
+}
+
+.formlabel {
+    position: absolute;
+    background-color: var(--app-background-color);
+    top: 0;
+    left: 20px;
+    font-size: 11px;
+}
+
+.input {
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 3px;
+    border: none;
+    outline: 1px solid grey;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(0 0 0 0);
+    visibility: hidden;
+}
+
+.checkbox:checked + .visible {
+    border-color: green;
+    background-color: grey;
+    background-image: url(/public/approve.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.visible {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 2px solid green;
+    border-radius: 4px;
+}
+
+.border {
+    margin: 5px 20px;
+    border: 0.5px solid gray;
+}

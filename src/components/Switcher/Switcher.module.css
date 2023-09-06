@@ -1,0 +1,40 @@
+.label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(0 0 0 0);
+    visibility: hidden;
+}
+
+.visible {
+    width: 55px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: green;
+}
+
+.round {
+    position: absolute;
+    margin-inline: 5px;
+    width: 23px;
+    height: 23px;
+    background-color: grey;
+    border-radius: 50%;
+    transition: transform .3s;
+}
+
+.checkbox:checked ~ .round {
+    transform: translate(100%);
+}
+
+.visible:hover, .round:hover {
+    cursor: pointer;
+}
